@@ -1,0 +1,168 @@
+//colors
+$color_shark_approx: #272727;
+$color_tundora_approx: #444;
+$color_supernova_approx: #fc0;
+$white: #fff;
+.schedule-entry {
+	&.type-series {
+		background-color: $color_shark_approx;
+	}
+	&.type-kids {
+		background-color: $color_shark_approx;
+	}
+	> .schedule-entry-starts {
+		float: right;
+		color: $color_supernova_approx;
+		font-weight: 600!important;
+		font-size: 13px;
+		padding: 10px 10px 0 00px;
+		width: 45px;
+		text-align: right;
+	}
+}
+.schedule-item {
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+	clear: both;
+	background: $color_shark_approx;
+	margin-top: 3px;
+	&.type-series {
+		background-color: $color_shark_approx;
+	}
+	&.type-kids {
+		background-color: $color_shark_approx;
+	}
+	h3 {
+		font-size: 13px;
+		position: relative;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 5px 6px 5px 5px;
+		a {
+			color: $white;
+			cursor: pointer;
+			font-size: 12px;
+		}
+	}
+	span.item-start-time {
+		color: $white;
+		font-weight: 600;
+		font-size: 11px;
+		text-align: right;
+		line-height: 18px;
+		float: right;
+		padding-left: 7px;
+	}
+}
+#single-channel-schedule {
+	.schedule-header {
+		display: block;
+		margin-bottom: 20px;
+		display: table;
+		overflow: hidden;
+		margin-bottom: 0;
+		border-bottom: 1px solid $color_tundora_approx;
+		padding: 10px;
+	}
+	.schedule-item span {
+		&.item-start-time {
+			display: inline-table;
+			width: 35px;
+			text-align: left;
+			line-height: 16px;
+			float: left;
+		}
+		&.item-title {
+			display: inline-table;
+			width: 69%;
+		}
+	}
+}
+.schedule-header {
+	margin: 0;
+	padding: 10px 5px 5px 10px;
+	float: left;
+	min-height: 50px;
+}
+.schedule-entry-channel {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	width: 65%;
+	padding: 10px 10px 7px;
+}
+.schedule-entry-starts {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	display: block;
+}
+.schedule-entry-info {
+	padding: 10px 10px 7px;
+	clear: both;
+	h4 {
+		font-size: 14px;
+		margin: 0;
+		line-height: 18px;
+		min-height: 36px;
+	}
+	.time-bar {
+		margin-top: 10px;
+		clear: both;
+	}
+}
+.on-air-item {
+	clear: both;
+	background: $color_shark_approx;
+}
+.general-results .channel-schedule {
+	&.type-series {
+		background-color: $color_shark_approx;
+	}
+	&.type-kides {
+		background-color: $color_shark_approx;
+	}
+}
+/*========== PROGRESS BAR ==========*/
+.progress {
+  background-color: #f4f7c8;
+  margin-bottom: 0;
+  height: 4px;
+  .disabled {
+    display: none;
+  }
+  .reversed {
+    background: #0477bf;
+  }
+  .disabled {
+    display: none;
+  }
+}
+.progress-bar {
+  background-color: #91ca2c;
+}
+.reversed .progress-bar {
+  background: #b1d3e8;
+}
+.schedule-container {
+  .countdown {
+   display: block;
+   font-size: 11px;
+   position: relative;
+   display: block;
+   color: #fc0;
+   padding: 5px 0 0 0;
+ }
+ span.countdown.active {
+   margin: 0 10px 3px;
+   font-size: 11px;
+   position: relative;
+   display: block;
+   color: #fc0;
+ }
+}

@@ -1,0 +1,183 @@
+//colors
+$color_masala_approx: #3c3c3c;
+
+div.channel-container:nth-of-type(2n+1){
+	clear:both;
+}
+
+.channel-logo-container {
+	display: block;
+	float: left;
+	padding-top: 2px;
+	margin-right: 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.channel-schedule {
+	margin: 0 10px;
+	background: $color_masala_approx;
+	overflow: hidden;
+}
+
+div.channel-container:nth-of-type(2n+1) .channel-schedule{
+	margin-right:0;
+}
+
+.channel-schedule-date {
+	float: left;
+	display: inline-block;
+	line-height: 30px;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: 100;
+}
+.channel-name {
+	text-align: right;
+	font-size: 11px;
+}
+.channel_logo {
+	max-height: 16px;
+	position: relative;
+	z-index: 1;
+}
+.program-overlay .channel-logo-container {
+	padding-top: 6px;
+	margin-right: 12px;
+}
+.channel_logo {
+  &.dr1, &.dr2 {
+    max-height: 16px;
+  }
+  &.tv3 {
+    max-height: 32px;
+  }
+  &.kanal5, &.six-eren {
+    max-height: 30px;
+  }
+  &.seven-eren, &.tv3-plus {
+    max-height: 32px;
+  }
+  &.tv3-sport-1, &.tv3-sport-2 {
+    max-height: 30px;
+  }
+  &.tv3-puls, &.kanal4 {
+    max-height: 32px;
+  }
+  &.eurosport, &.canal9 {
+    max-height: 30px;
+  }
+  &.national-geographic {
+    max-height: 26px;
+  }
+  &.tv2 {
+    max-height: 18px;
+  }
+  &.viasat-film, &.viasat-film-nordic {
+    max-height: 28px;
+  }
+  &.viasat-nature {
+    max-height: 32px;
+  }
+  &.viasat-history, &.viasat-film-classic, &.viasat-film-family {
+    max-height: 26px;
+  }
+  &.viasat-film-action {
+    max-height: 28px;
+  }
+  &.discovery-science {
+    max-height: 22px;
+  }
+  &.mtv {
+    max-height: 28px;
+  }
+  &.drrama {
+    max-height: 26px;
+  }
+  &.dr-ultra {
+    max-height: 27px;
+  }
+  &.tv2-fri {
+    max-height: 16px;
+  }
+  &.tv2-sport {
+    max-height: 20px;
+  }
+  &.c-more-first, &.c-more-hits {
+    max-height: 25px;
+  }
+  &.viasat_film {
+    max-height: 20px;
+  }
+  &.animal-planet {
+    max-height: 24px;
+  }
+  &.viasat-explorer {
+    max-height: 40px;
+  }
+  &.c-more-action {
+    max-height: 25px;
+  }
+  &.c-more-sport-hd {
+    max-height: 24px;
+  }
+  &.viasat-history {
+    max-height: 40px;
+  }
+  &.viasat-nature-crime {
+    max-height: 30px;
+  }
+  &.eurosport-2 {
+    max-height: 36px;
+  }
+  &.dk4 {
+    max-height: 20px;
+  }
+  &.cartoon-network {
+    max-height: 18px;
+  }
+  &.tv2-news {
+    max-height: 14px;
+  }
+  &.viasat-golf {
+    max-height: 23px;
+  }
+  &.tcm, &.tlc {
+    max-height: 25px;
+  }
+  &.viasat-film-drama {
+    max-height: 28px;
+  }
+  &.discovery-channel {
+    max-height: 15px;
+  }
+  &.bbc-entertainment {
+    max-height: 20px;
+  }
+  &.canal8-sport {
+    max-height: 40px;
+  }
+  &.drk {
+    max-height: 16px;
+  }
+  &.c-more-kids, &.c-more-tennis {
+    max-height: 24px;
+  }
+  &.dr3 {
+    max-height: 16px;
+  }
+  &.c-more-series, &.c-more-series-hd, &.c-more-emotion, &.c-more-extreme, &.c-more-first-hd, &.c-more-hits-hd {
+    max-height: 24px;
+  }
+  &.sf-kanalen {
+    max-height: 10px;
+  }
+  &.c-more-hits-boxer {
+    max-height: 24px;
+  }
+}
+
+.channel-schedule .channel_logo {
+  &.dr1, &.dr2 {
+    max-height: 16px;
+  }
+}

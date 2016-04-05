@@ -1,0 +1,257 @@
+//colors
+$color_masala_approx: #3c3c3c;
+$white: #fff;
+$color_affair_approx: #845086;
+$black_20: rgba(0,0,0,0.2);
+$color_supernova_approx: #fc0;
+$white_60: rgba(255,255,255,.6);
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+body {
+	padding-top: 70px;
+  background: $color_masala_approx !important;
+}
+a {
+	color: $white !important;
+  text-decoration: none;
+	font-family: $font_0, $font_1;
+	font-weight: 300;
+	letter-spacing: .02em;
+	text-rendering: optimizeLegibility;
+	cursor: pointer;
+	&:hover {
+    color: white;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+li {
+  list-style-type: none;
+}
+
+span {
+  color: white;
+}
+
+.nav {
+  align-items: center;
+  width: 100%;
+	display: flex;
+  justify-content: space-between;
+  > li > a {
+    padding: 0 !important;
+  }
+}
+
+.navbar-nav{
+	> li > a {
+	  padding: 0;
+	}
+}
+
+.navbar-default {
+	background-image: none !important;
+	background-color: $color_affair_approx !important;
+	border-color: $color_affair_approx !important;
+	div.container{
+		padding:0;
+	}
+	// .navbar-collapse {
+	// 	border-color: $color_affair_approx;
+	// }
+}
+.channels-container {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: transform 400ms ease-in-out;
+}
+.main-channels {
+	padding-top: 10px;
+}
+#schedules-container {
+	margin: 0 5px;
+	position: relative;
+	z-index: 100;
+}
+.npr {
+	padding-right: 0 !important;
+}
+.npl {
+	padding-left: 0 !important;
+}
+.cf {
+	&:before {
+		content: ' ';
+		display: table;
+	}
+	&:after {
+		content: ' ';
+		display: table;
+		clear: both;
+	}
+}
+.on-air-item {
+	position: relative;
+	h3 {
+		font-size: 13px;
+		padding: 10px;
+		margin: 0;
+	}
+	span {
+		&.item-start-time {
+			color: $color_supernova_approx;
+			font-weight: 600!important;
+			display: inline-table;
+			width: 35px;
+			float: right;
+			font-size: 13px;
+			margin-bottom: 5px;
+			line-height: 25px;
+		}
+		&.item-title {
+			display: block;
+			text-overflow: ellipsis;
+			line-height: 16px;
+			font-size: 14px;
+			font-weight: 400;
+			padding-right: 33px;
+		}
+	}
+	.item-genre {
+		color: $white_60;
+	}
+}
+.schedule-item {
+	.item-genre {
+		color: $white_60;
+	}
+	span.item-title {
+		display: block;
+		text-overflow: ellipsis;
+	}
+}
+
+span.item-title {
+	line-height: 16px;
+	word-wrap: break-word;
+	display: block;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+}
+.slick-prev{
+	display: none !important;
+}
+
+ .slick-next {
+    font-size: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+		right: 13px;
+    display: block;
+    width: 20px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+		font-family: FontAwesome;
+		text-align: right;
+}
+.slick-next:before {
+content: "\f105";
+}
+
+.slick-next:after {
+
+}
+
+.thumb {
+  overflow: hidden;
+  padding-right: 5px;
+  height: 100%;
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Always float the navbar header */
+
+.navbar-header {
+  float: left;
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Always apply the floated nav */
+
+.navbar-default .navbar-nav >.active >a {
+  background-color: transparent !important;
+	height:33px;
+}
+
+/* Redeclare since we override the float above */
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: $color_affair_approx;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.navbar-default .navbar-nav .open {
+  a {
+    background: transparent !important;
+  }
+  .dropdown-menu > li > a {
+    color: #333;
+  }
+}
+
+.navbar .navbar-nav .open .dropdown-menu > {
+  li > a {
+    &:hover, &:focus {
+      color: #fff !important;
+      background-color: #428bca !important;
+    }
+  }
+  .active > a {
+    color: #fff !important;
+    background-color: #428bca !important;
+    &:hover, &:focus {
+      color: #fff !important;
+      background-color: #428bca !important;
+    }
+  }
+  .disabled > a {
+    color: #999 !important;
+    background-color: transparent !important;
+    &:hover, &:focus {
+      color: #999 !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+@import "./schedule";
+@import "./channel";
+@import "./program";
+@import "./news";
+@import "./contact_form";
+@import "./login";

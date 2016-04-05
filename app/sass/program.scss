@@ -1,0 +1,291 @@
+//colors
+$color_mine_shaft_approx: #333;
+$white: #fff;
+$color_tundora_approx: #444;
+$color_atlantis_approx: #8ecf1a;
+$black_50: rgba(0,0,0,.5);
+$color_nobel_approx: #b5b5b5;
+$color_yellow_orange_approx: #ffb940;
+$color_royal_blue_approx: #3e7dee;
+$color_cerulean_approx: #00ace2;
+$color_sunset_orange_approx: #fe4a37;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+//urls
+$url_0: url(/app/img/top-ramp.png);
+$url_1: url(/app/img/bottom-ramp.png);
+
+//@extend-elements
+//original selectors
+//.program-genre a, .program-year a
+%extend_1 {
+	color: $white;
+	margin-left: 3px;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+
+
+.program-description {
+	font-family: $font_0, $font_1;
+	font-size: 14px;
+	letter-spacing: .03em;
+	text-rendering: optimizeLegibility;
+	padding: 0 20px 20px;
+	color: $color_mine_shaft_approx;
+	font-weight: 400;
+	display: block;
+}
+#program-overlay {
+	display: block;
+	margin: 0 10px 10px;
+	background-color: $white;
+	overflow: hidden;
+}
+.program-overlay {
+	padding: 0;
+	position: relative;
+	background: $white;
+	.schedule-header {
+		border-bottom: 1px solid $color_tundora_approx;
+		padding: 0 0 10px 0;
+		margin-bottom: 0;
+		background: $white;
+		display: none;
+	}
+}
+.program-poster-info {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	min-height: 200px;
+}
+.top-info {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	z-index: 999;
+	background: $url_0 repeat-x;
+	padding: 15px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	top: 0;
+	.title {
+		display: block;
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+}
+.bottom-info {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	z-index: 999;
+	background: $url_1 repeat-x;
+	bottom: -1px;
+	padding: 15px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	background-position: bottom;
+}
+.program-genre {
+	color: $white;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: .02em;
+	bottom: 35px;
+	position: absolute;
+	z-index: 9999;
+	left: 10px;
+	a {
+		@extend %extend_1;
+	}
+}
+.program-timing {
+	color: $white;
+	font-weight: 100;
+	font-size: 22px;
+	position: absolute;
+	bottom: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	z-index: 9999;
+	left: 10px;
+}
+.rating {
+	&.program-rating-conversation {
+		position: absolute;
+		bottom: 20px;
+		padding: 0;
+		z-index: 9999;
+		right: 10px;
+		.glyphicon {
+			width: 28px!important;
+		}
+	}
+	.glyphicon {
+		margin: 0;
+		padding: 0;
+		width: 18px;
+		float: left;
+		height: 24px;
+		line-height: 24px;
+		&:before {
+			font-size: 24px;
+			line-height: 24px;
+			margin: 0;
+		}
+	}
+}
+.social-connect {
+	margin: 0 0 5px;
+	float: left;
+	width: 100%;
+	position: relative;
+	.email i {
+		color: $color_nobel_approx;
+	}
+	.rss i {
+		color: $color_yellow_orange_approx;
+	}
+	.facebook i {
+		color: $color_royal_blue_approx;
+	}
+	.twitter i {
+		color: $color_cerulean_approx;
+	}
+	.google i {
+		color: $color_sunset_orange_approx;
+	}
+	.icon-facebook:before {
+		content: "a";
+	}
+	.icon-twitter:before {
+		content: "c";
+	}
+	.icon-google:before {
+		content: "d";
+	}
+	.icon-email:before {
+		content: "e";
+	}
+	.icon-rss:before {
+		content: "b";
+	}
+}
+.program-social-link {
+	width: 25%;
+	height: 32px;
+	text-align: center;
+	display: block;
+	float: left;
+	border: 1px solid $color_nobel_approx;
+	border-right: 0;
+	background: none;
+	&:first-child {
+		border-left: none;
+	}
+	&:last-child {
+		border-right: none;
+	}
+	i {
+		line-height: 32px;
+		font-size: 21px;
+	}
+}
+.title h1 {
+	font-size: 20px;
+	color: $white;
+	font-weight: 300;
+	margin: 0 0 2px 0;
+	line-height: 20px;
+}
+.program-year a {
+	@extend %extend_1;
+}
+.subscribe.rating_stars {
+	cursor: pointer;
+}
+.rating-full.glyphicon:before {
+	color: $color_atlantis_approx;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 0 1px $black_50;
+}
+.rating-empty.glyphicon:before {
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 0 1px $black_50;
+}
+.news-item-reader .social-connect {
+	margin-top: 1px;
+}
+.program-icons-wrapper {
+	height: 100px;
+	display: block;
+	position: relative;
+	.program-icons {
+	  margin: 0 auto;
+	  display: table;
+	  position: relative;
+	  box-sizing: border-box;
+	  width: 300px;
+	  padding: 10px 20px 0;
+			.program-icon {
+			display: table-cell;
+			width: 33%;
+					.icon-data {
+						text-align: center;
+						font-size: 11px;
+						width: 50px;
+						margin: 0 auto;
+							.circle-info {
+								position: relative;
+								margin-bottom: 5px;
+								.circle-icon-text {
+							    position: absolute;
+							    top: 50%;
+							    font-size: 8px;
+							    font-weight: 600;
+							    margin-top: -4px;
+							    width: 100%;
+							    text-align: center;
+									span{
+										color: #666;
+									}
+								}
+								.canvas{
+									width:50px;
+									height:50px;
+									background: #ccc;
+									border-radius: 50%;
+								}
+								.icon-action {
+			    				position: absolute;
+			    				width: 50px;
+			    				height: 50px;
+			    				top: 0;
+			    				left: 0;
+									.glyphicon {
+								    cursor: pointer;
+								    height: 100%;
+								    width: 100%;
+									  padding: 0;
+									  margin: 0;
+										font-size: 24px;
+									  }
+									.glyphicon-bell:before {
+										  color: #dd5200;
+										  margin: 13px;
+											display: block;
+									}
+								}
+							}
+					}
+			}
+	}
+}

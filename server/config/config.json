@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "artem",
+    "password": "artem!~908",
+    "database": "tvguide",
+    "host": "10.0.255.124",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "artem",
+    "password": "artem!~908",
+    "database": "tvguide",
+    "host": "10.0.255.124",
+    "dialect": "mysql"
+  }
+}
